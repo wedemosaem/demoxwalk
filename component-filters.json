@@ -8,6 +8,7 @@
   {
     "id": "section",
     "components": [
+      "content-fragment",
       "text",
       "image",
       "button",
@@ -38,5 +39,9 @@
       "button",
       "title"
     ]
-  }
+  },
+
+
+
+  
 ]
