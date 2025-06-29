@@ -87,7 +87,8 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
                 
                 <div class="ficha-column ficha-column-right">
                     
-
+                    <h4>Titulo</h4>
+                    <p>${titulo}</p>
 
                     <h4>Sinopsis</h4>
                     <p>${sinopsis}</p>
@@ -120,5 +121,3 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
 
 
 
-                    // <h4>Titulo</h4>
-                    // <p>${titulo}</p>
