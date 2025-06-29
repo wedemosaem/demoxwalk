@@ -3,8 +3,10 @@
 const AEM_HOST = checkDomain()
 
 function checkDomain(){
-  if (window.location.hostname.includes("hlx.page") || window.location.hostname.includes("localhost")){
-    return "https://publish-p157306-e1665625.adobeaemcloud.com/"    
+  if (window.location.hostname.includes("hlx.page") 
+    || window.location.hostname.includes("localhost") 
+        || window.location.hostname.includes("aem.page")){
+    return "https://publish-p157306-e1665625.adobeaemcloud.com/"
   }else{
     return window.location.origin 
   }
@@ -28,7 +30,7 @@ export default function decorate(block) {
 fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug)
 .then(response => response.json())
 .then(response => {
-    console.log(JSON.stringify(response,0,3));
+    // console.log(JSON.stringify(response,0,3));
 
             const cover_image_path = AEM_HOST + response.data.peliculaList.items[0].cover._path;
             const titulo =  response.data.peliculaList.items[0].titulo;
