@@ -8,7 +8,8 @@ export default function decorate(block) {
   // 2. Extract their values
   const titleText = titleDiv.textContent.trim();
   const tag       = (typeDiv.textContent.trim() || 'h2').toLowerCase();
-  const color     = colorDiv.textContent.trim() || '#000000';
+//   const color     = colorDiv.textContent.trim() || '#000000';
+  const color     = '#FFFFFF';
 
   // 3. Create the heading element and apply color
   const heading = document.createElement(tag);

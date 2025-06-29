@@ -122,13 +122,13 @@ h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
 
 /* Add a partial yellow underline under H2 */
-h2::after {
+/* h2::after {
   border-bottom: 2px solid var(--primary-color);
   content: "";
   display: block;
   padding-top: 8px;
   width: 84px;
-}
+} */
 
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }

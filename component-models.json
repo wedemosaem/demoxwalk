@@ -254,6 +254,13 @@
 
       },
       {
+        "component": "color",
+        "name": "color",
+        "label": "Color",
+        "valueType": "string" 
+
+      },
+      {
         "component": "select",
         "name": "titleType",
         "label": "Title Type",
@@ -283,14 +290,7 @@
             "value": "h6"
           }
         ]
-      },
-      {
-        "component": "color",
-        "name": "color",
-        "label": "Color",
-        "valueType": "string" 
-
-      }      
+      }     
     ]
   }
 
