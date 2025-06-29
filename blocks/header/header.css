@@ -304,7 +304,12 @@ header .header.block nav {
   .nav-sections {
     /* Update menu items display properties */
     a {
-      text-transform: uppercase;
+      /* text-transform: uppercase; */
+
+    text-transform: capitalize;
+
+
+
       background-color: transparent;
       /* color: var(--text-color); */
       color: #FFF;
