@@ -1,23 +1,23 @@
 // titlecustom.js
 export default function decorate(block) {
-  // 1. Grab the three field placeholders
-  const titleDiv = block.querySelector('div:nth-child(1)');
-  const typeDiv  = block.querySelector('div:nth-child(2)');
-  const colorDiv = block.querySelector('div:nth-child(3)');
+  // grab the three field placeholders in the order defined in your JSON
+  const placeholders = Array.from(block.querySelectorAll(':scope > div'));
+  const titleDiv = placeholders[0];
+  const colorDiv = placeholders[1];
+  const typeDiv  = placeholders[2];
 
-  // 2. Extract their values
-  const titleText = titleDiv.textContent.trim();
-  const tag       = (typeDiv.textContent.trim() || 'h2').toLowerCase();
-  const color     = colorDiv.textContent.trim() || '#000000';
-//   const color     = '#FFFFFF';
+  // extract their values (with sensible defaults)
+  const titleText = titleDiv?.textContent.trim()    || '';
+  const colorHex  = colorDiv?.textContent.trim()    || '#000000';
+  const tagName   = (typeDiv?.textContent.trim()    || 'h2').toLowerCase();
 
-  // 3. Create the heading element and apply color
-  const heading = document.createElement(tag);
+  // build the heading
+  const heading = document.createElement(tagName);
   heading.classList.add('titlecustom-heading');
   heading.textContent = titleText;
-  heading.style.color   = color;
+  heading.style.color   = colorHex;
 
-  // 4. Replace the entire block content with our heading
-  block.innerHTML = '';
+  // replace the entire block with our new heading
+  block.textContent = '';
   block.appendChild(heading);
 }
