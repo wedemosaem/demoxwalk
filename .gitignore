@@ -7,3 +7,7 @@ helix-importer-ui
 .DS_Store
 *.bak
 .idea
+
+
+blocks/ficha/ficha copy.css
+blocks/ficha/ficha copy.js
