@@ -188,7 +188,22 @@
               } 
             } 
           } 
-        } 
+        },
+
+        {
+          "title": "Title Custom",
+          "id": "titlecustom",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/title/v1/title",
+                "template": {
+                  "model": "titlecustom"
+                }
+              }
+            }
+          }
+        },
 
 
 
