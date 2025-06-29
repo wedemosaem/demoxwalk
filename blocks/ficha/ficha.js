@@ -87,8 +87,7 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
                 
                 <div class="ficha-column ficha-column-right">
                     
-                    <h4>Titulo</h4>
-                    <p>${titulo}</p>
+
 
                     <h4>Sinopsis</h4>
                     <p>${sinopsis}</p>
@@ -109,37 +108,6 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
 
             `;
 
-
-
-
-
-
-
-    // const backgroundImage = response.data.peliculaList.items[0].primaryImage._path;
-    // const backgroundImage = response.data.peliculaList.items[0].cover._path;
-    // document.getElementById(fichaDiv.id).innerHTML = "<section><img src=" + AEM_HOST + backgroundImage + "></section>";  
-
-    // const adventureTitle = response.data.peliculaList.items[0].titulo;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section><h3>"+ adventureTitle + "</h3></section>";
-
-    // const adventureDesc = response.data.peliculaList.items[0].sinopsis.plaintext;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section>" + adventureDesc + "</section>";
-
-    // const adventureType = response.data.peliculaList.items[0].adventureType;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section>" + "Adventure Type: " + adventureType + "</section>";
-
-    // const tripLength = response.data.peliculaList.items[0].tripLength;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section>" +"Trip Length: " + tripLength + "</section>";
-
-    // const tripDifficulty = response.data.peliculaList.items[0].difficulty;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section>" + "Difficulty: " + tripDifficulty + "</section>";
-
-    // const groupSize = response.data.peliculaList.items[0].groupSize;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section>" + "Group Size: " + groupSize + "</section>";
-
-    // const tripItinerary= response.data.peliculaList.items[0].itinerary.html;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section>" + "Itinerary: </br>" + tripItinerary + "</section>";
-
 })
 .catch(error => {
   console.log('Error fetching data:', error);
@@ -152,3 +120,5 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
 
 
 
+                    // <h4>Titulo</h4>
+                    // <p>${titulo}</p>
