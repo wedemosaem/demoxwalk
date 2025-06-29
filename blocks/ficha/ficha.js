@@ -38,16 +38,18 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
             const equipotecnico =  response.data.peliculaList.items[0].equipotecnico;
 
             fichaDiv.innerHTML = `
+            <section>
               <div class="ficha-container">
                 <div class="ficha-column ficha-column-left">
-                <h2>Left Column</h2>
-                <p>This column takes up one-third of the width.</p>
+                    <section><img src="${cover_image_path}"></section>
                 </div>
+                
                 <div class="ficha-column ficha-column-right">
-                <h2>Right Column</h2>
-                <p>This column takes up two-thirds of the width and drops below on smaller screens.</p>
+                    <h3>Right Column</h3>
+                    <p>This column takes up two-thirds of the width and drops below on smaller screens.</p>
                 </div>
             </div>
+            </section>
             `;
 
 
