@@ -28,7 +28,7 @@ export default function decorate(block) {
 fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug)
 .then(response => response.json())
 .then(response => {
-    // console.log(JSON.stringify(response,0,3));
+    console.log(JSON.stringify(response,0,3));
 
             const cover_image_path = AEM_HOST + response.data.peliculaList.items[0].cover._path;
             const titulo =  response.data.peliculaList.items[0].titulo;
@@ -38,82 +38,17 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
             const equipotecnico =  response.data.peliculaList.items[0].equipotecnico;
 
             fichaDiv.innerHTML = `
-            <div class="brick slab-secondary brick-divided brick-third">
-            <div class="wrapper">
-                <div class="g brick-content">
-                <div class="gi lap-one-third">
-                    <div class="ee-info">
-                    <div class="cover">
-                        <img src=src="${cover_image_path}" alt="${titulo}" title="${titulo}">
-                    </div>
-                    </div>
-                    <div class="ee-stars">
-                    <h2 class="heading light">Valoración de usuarios</h2>
-                    <div class="rating-content j-stars">
-                        <div class="stars">
-                        <!-- stars markup could be dynamic if needed -->
-                        </div>
-                        <div class="rating-value">
-                        <span class="rating">${calificacion}</span>
-                        </div>
-                    </div>
-                    </div>
+              <div class="ficha-container">
+                <div class="ficha-column ficha-column-left">
+                <h2>Left Column</h2>
+                <p>This column takes up one-third of the width.</p>
                 </div>
-                <div class="gi lap-two-thirds">
-                    <div class="ee-info-2">
-                    <div class="g">
-                        <div class="gi desk-one-half col1ee">
-                        <ul class="list-actions">
-                            <li><a href="#" class="button-link button-link-right"><span class="icon icon-play"></span>Soy cliente</a></li>
-                        </ul>
-                        </div>
-                        <div class="gi desk-one-half col2ee">
-                        <a href="#" class="button sc-btn-c2c"><span>Suscribirme ahora</span></a>
-                        <div class="mplus-tags">
-                            <!-- SVG icon omitted for brevity -->
-                            Incluido en suscripción de 9,99€
-                        </div>
-                        </div>
-                    </div>
-                    <div class="g">
-                        <div class="gi desk-one-third">
-                        <div class="heading"><h3>Título</h3></div>
-                        <p>${titulo}</p>
-                        </div>
-                        <div class="gi desk-two-thirds">
-                        <div class="heading"><h2>Sinopsis</h2></div>
-                        <div class="show-content">
-                            <div class="text show-more-height">
-                            <p>${sinopsis}</p>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="gi desk-one-third">
-                        <div class="heading"><h3>Info</h3></div>
-                        <p>${info}</p>
-                        <div class="moral">
-                            <div class="heading"><h3>Calificación</h3></div>
-                            <h2>${calificacion}</h2>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+                <div class="ficha-column ficha-column-right">
+                <h2>Right Column</h2>
+                <p>This column takes up two-thirds of the width and drops below on smaller screens.</p>
                 </div>
-                </div>
-                <section class="g brick-content datos-tecnicos">
-                <div class="gi lap-one-third">
-                    <div class="h-delta"><h2>Equipo Técnico</h2></div>
-                </div>
-                <div class="gi lap-two-thirds">
-                    <div class="g">
-                    <div class="gi lap-one-half">
-                        <p>${equipotecnico}</p>
-                    </div>
-                    </div>
-                </div>
-                </section>
             </div>
-            </div>`;
+            `;
 
 
 

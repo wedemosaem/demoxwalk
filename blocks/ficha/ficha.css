@@ -1,36 +1,25 @@
-/* ficha.css */
-/* Styles scoped to the Ficha block only */
+    .ficha-container {
+      display: flex;
+      flex-wrap: wrap;
+        background-color: #000;
+    }
 
-.brick.slab-secondary.brick-divided.brick-third {
-  background-color: var(--color-background-light);
-  padding: 1.5em;
-}
+    .ficha-column {
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-.brick.slab-secondary.brick-divided.brick-third .cover img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    .ficha-column-left {
+      flex: 1 1 33.33%;
+    }
 
-.brick.slab-secondary.brick-divided.brick-third .ee-stars {
-  margin-top: 1em;
-}
+    .ficha-column-right {
+      flex: 2 1 66.66%;
+    }
 
-.brick.slab-secondary.brick-divided.brick-third .rating-value .rating {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.brick.slab-secondary.brick-divided.brick-third .show-content .text {
-  max-height: 120px;
-  overflow: hidden;
-  position: relative;
-}
-
-.brick.slab-secondary.brick-divided.brick-third .show-content .text.show-more-height:hover {
-  max-height: none;
-}
-
-.brick.slab-secondary.brick-divided.brick-third .datos-tecnicos .h-delta h2 {
-  margin-bottom: 0.5em;
-}
+    @media (max-width: 768px) {
+      .ficha-column-left,
+      .ficha-column-right {
+        flex: 1 1 100%;
+      }
+    }
