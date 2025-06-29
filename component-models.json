@@ -249,7 +249,9 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Title"
+        "label": "Title",
+        "valueType": "string" 
+
       },
       {
         "component": "select",
@@ -285,7 +287,9 @@
       {
         "component": "color",
         "name": "color",
-        "label": "Color"
+        "label": "Color",
+        "valueType": "string" 
+
       }      
     ]
   }
