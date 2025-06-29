@@ -36,8 +36,8 @@ fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/item-by-id;slug=' + slug
     const adventureTitle = response.data.peliculaList.items[0].titulo;
     document.getElementById(fichaDiv.id).innerHTML += "<section><h3>"+ adventureTitle + "</h3></section>";
 
-    // const adventureDesc = response.data.peliculaList.items[0].description.plaintext;
-    // document.getElementById(fichaDiv.id).innerHTML += "<section>" + adventureDesc + "</section>";
+    const adventureDesc = response.data.peliculaList.items[0].sinopsis.plaintext;
+    document.getElementById(fichaDiv.id).innerHTML += "<section>" + adventureDesc + "</section>";
 
     // const adventureType = response.data.peliculaList.items[0].adventureType;
     // document.getElementById(fichaDiv.id).innerHTML += "<section>" + "Adventure Type: " + adventureType + "</section>";
