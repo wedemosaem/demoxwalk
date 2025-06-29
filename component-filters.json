@@ -8,6 +8,7 @@
   {
     "id": "section",
     "components": [
+      "ficha",
       "content-fragment",
       "text",
       "image",
@@ -17,6 +18,7 @@
       "cards",
       "columns",
       "fragment"
+      
     ]
   },
   {
