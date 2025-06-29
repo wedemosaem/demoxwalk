@@ -254,7 +254,7 @@
 
       },
       {
-        "component": "color",
+        "component": "text",
         "name": "color",
         "label": "Color",
         "valueType": "string" 
